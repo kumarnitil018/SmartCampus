@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teacher Dashboard – SmartCampus</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/teacher.css" />
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body data-page="dashboard">
+<div class="app">
+
+    <aside class="sidebar" id="sidebar">
+        <div class="brand"><span class="logo">🎓</span> Smart<span>Campus</span></div>
+        <nav>
+            <a href="dashboard.html"><span class="ico">🏠</span> Dashboard</a>
+            <a href="subjects.html"><span class="ico">📚</span> My Subjects</a>
+            <a href="mark-attendance.html"><span class="ico">✅</span> Mark Attendance</a>
+            <a href="attendance-history.html"><span class="ico">🕘</span> History & Reports</a>
+        </nav>
+        <div class="logout"><button onclick="logout()">⎋ Logout</button></div>
+    </aside>
+
+    <div class="main">
+        <div class="topbar">
+            <div style="display:flex;align-items:center;gap:14px">
+                <button class="hamburger" onclick="toggleSidebar()">☰</button>
+                <h2>Teacher Dashboard</h2>
+            </div>
+            <div class="user-chip"><span class="avatar">T</span> <span id="userName">teacher</span></div>
+        </div>
+
+        <div class="content">
+            <div class="pct-card" style="margin-bottom:26px">
+                <div class="avatar" style="width:70px;height:70px;font-size:1.6rem;background:linear-gradient(135deg,#0d9488,#06b6d4)">🧑‍🏫</div>
+                <div>
+                    <h2 id="teacherName">—</h2>
+                    <p class="muted" id="deptInfo">—</p>
+                </div>
+            </div>
+
+            <div class="stat-grid">
+                <div class="stat c-primary">
+                    <div class="ico">📚</div>
+                    <div class="val" id="statSubjects">0</div>
+                    <div class="lbl">My Subjects</div>
+                </div>
+                <div class="stat c-success">
+                    <div class="ico">🧑‍🎓</div>
+                    <div class="val" id="statStudents">0</div>
+                    <div class="lbl">Students (total)</div>
+                </div>
+                <div class="stat c-warning">
+                    <div class="ico">✅</div>
+                    <div class="val">—</div>
+                    <div class="lbl">Quick Mark</div>
+                </div>
+                <div class="stat c-danger">
+                    <div class="ico">🕘</div>
+                    <div class="val">—</div>
+                    <div class="lbl">Reports</div>
+                </div>
+            </div>
+
+            <div class="panel" style="margin-top:0">
+                <div class="panel-head">
+                    <h3>My Subjects</h3>
+                    <a class="btn btn-ghost btn-sm" href="subjects.html">Manage subjects</a>
+                </div>
+                <div class="panel-body">
+                    <div class="grid grid-3" id="subjectCards"><p class="muted">Loading…</p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../js/script.js"></script>
+<script src="../js/teacher.js"></script>
+</body>
+</html>

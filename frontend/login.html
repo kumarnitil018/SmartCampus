@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login – SmartCampus</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/login.css" />
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+    <div class="auth-wrap">
+        <!-- Left decorative panel -->
+        <div class="auth-side">
+            <a class="brand" href="index.html"><span class="logo">🎓</span> SmartCampus</a>
+            <h2>Welcome back 👋</h2>
+            <p>Log in to view your attendance, subject-wise progress and monthly reports.</p>
+            <ul>
+                <li><i>✅</i> Real-time attendance percentage</li>
+                <li><i>✅</i> Subject & month-wise breakdown</li>
+                <li><i>✅</i> Secure, role-based access</li>
+            </ul>
+        </div>
+
+        <!-- Right form -->
+        <div class="auth-main">
+            <div class="auth-box">
+                <div class="logo-mobile"><span class="logo">🎓</span> Smart<span>Campus</span></div>
+                <h1>Sign in</h1>
+                <p class="sub">Students and teachers use the same login.</p>
+
+                <div class="alert" id="alertBox"></div>
+
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input class="form-control" id="username" name="username" placeholder="e.g. aarav" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input class="form-control" id="password" name="password" type="password" placeholder="••••••••" required />
+                    </div>
+                    <button class="btn btn-primary btn-block" type="submit">Log In</button>
+                </form>
+
+                <p class="auth-footer">Don't have an account? <a href="register.html">Register here</a></p>
+
+                <div class="demo-note">
+                    <b>Demo accounts:</b><br />
+                    Teacher → <b>prof.sharma</b> / <b>teacher123</b><br />
+                    Student → <b>aarav</b> / <b>student123</b>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/login.js"></script>
+</body>
+</html>

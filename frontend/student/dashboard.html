@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Dashboard – SmartCampus</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/student.css" />
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body data-page="dashboard">
+<div class="app">
+
+    <!-- ============ SIDEBAR ============ -->
+    <aside class="sidebar" id="sidebar">
+        <div class="brand"><span class="logo">🎓</span> Smart<span>Campus</span></div>
+        <nav>
+            <a href="dashboard.html"><span class="ico">🏠</span> Dashboard</a>
+            <a href="attendance.html"><span class="ico">📅</span> Date-wise</a>
+            <a href="subject-attendance.html"><span class="ico">📚</span> Subject-wise</a>
+            <a href="monthly-attendance.html"><span class="ico">📈</span> Monthly</a>
+        </nav>
+        <div class="logout"><button onclick="logout()">⎋ Logout</button></div>
+    </aside>
+
+    <!-- ============ MAIN ============ -->
+    <div class="main">
+        <div class="topbar">
+            <div style="display:flex;align-items:center;gap:14px">
+                <button class="hamburger" onclick="toggleSidebar()">☰</button>
+                <h2>Student Dashboard</h2>
+            </div>
+            <div class="user-chip"><span class="avatar">S</span> <span id="userName">student</span></div>
+        </div>
+
+        <div class="content">
+            <!-- Profile card -->
+            <div class="pct-card" style="margin-bottom:26px">
+                <div class="ring" id="ring" style="--val:0">
+                    <span class="ring-val" id="ringVal">0%</span>
+                </div>
+                <div>
+                    <h2 id="studentName">—</h2>
+                    <p class="muted" id="courseInfo">—</p>
+                    <p style="margin-top:6px"><b>Roll No:</b> <span id="rollNumber">—</span></p>
+                    <p class="muted" id="overallText" style="margin-top:8px"></p>
+                </div>
+            </div>
+
+            <!-- Stat cards -->
+            <div class="stat-grid">
+                <div class="stat c-primary">
+                    <div class="ico">📚</div>
+                    <div class="val" id="statSubjects">0</div>
+                    <div class="lbl">Total Subjects</div>
+                </div>
+                <div class="stat c-warning">
+                    <div class="ico">🗓️</div>
+                    <div class="val" id="statTotal">0</div>
+                    <div class="lbl">Total Classes</div>
+                </div>
+                <div class="stat c-success">
+                    <div class="ico">✅</div>
+                    <div class="val" id="statAttended">0</div>
+                    <div class="lbl">Classes Attended</div>
+                </div>
+                <div class="stat c-danger">
+                    <div class="ico">❌</div>
+                    <div class="val" id="statAbsent">0</div>
+                    <div class="lbl">Classes Absent</div>
+                </div>
+            </div>
+
+            <!-- Subject progress -->
+            <div class="panel">
+                <div class="panel-head">
+                    <h3>Subject-wise Attendance</h3>
+                    <a class="btn btn-ghost btn-sm" href="subject-attendance.html">View details</a>
+                </div>
+                <div class="panel-body" id="subjectList">
+                    <p class="muted">Loading…</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../js/script.js"></script>
+<script src="../js/student.js"></script>
+</body>
+</html>

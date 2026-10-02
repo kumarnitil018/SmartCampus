@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register – SmartCampus</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/login.css" />
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+    <div class="auth-wrap">
+        <!-- Left panel -->
+        <div class="auth-side">
+            <a class="brand" href="index.html"><span class="logo">🎓</span> SmartCampus</a>
+            <h2>Join SmartCampus</h2>
+            <p>Create your account as a student or a teacher and start managing attendance digitally.</p>
+            <ul>
+                <li><i>🎯</i> One account, role-based dashboard</li>
+                <li><i>🎯</i> Instant attendance insights</li>
+                <li><i>🎯</i> Free and easy to use</li>
+            </ul>
+        </div>
+
+        <!-- Right form -->
+        <div class="auth-main">
+            <div class="auth-box">
+                <div class="logo-mobile"><span class="logo">🎓</span> Smart<span>Campus</span></div>
+                <h1>Create account</h1>
+                <p class="sub">Choose your role and fill in the details.</p>
+
+                <div class="role-switch">
+                    <button type="button" class="active" data-role="student">🎓 Student</button>
+                    <button type="button" data-role="teacher">🧑‍🏫 Teacher</button>
+                </div>
+
+                <div class="alert" id="alertBox"></div>
+
+                <form id="registerForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Username</label>
+                            <input class="form-control" name="username" placeholder="username" required />
+                        </div>
+                        <div class="form-group">
+                            <label>Full Name</label>
+                            <input class="form-control" name="full_name" placeholder="Your name" required />
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input class="form-control" name="email" type="email" placeholder="you@example.com" required />
+                        </div>
+                        <div class="form-group">
+                            <label>Phone</label>
+                            <input class="form-control" name="phone" placeholder="Optional" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input class="form-control" name="password" type="password" placeholder="At least 6 characters" required />
+                    </div>
+
+                    <!-- Student-only fields -->
+                    <div class="student-only">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Roll Number</label>
+                                <input class="form-control" name="roll_number" placeholder="e.g. CSE-2023-010" />
+                            </div>
+                            <div class="form-group">
+                                <label>Semester</label>
+                                <input class="form-control" name="semester" type="number" min="1" max="8" value="3" />
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Course</label>
+                                <input class="form-control" name="course" placeholder="e.g. B.Tech" />
+                            </div>
+                            <div class="form-group">
+                                <label>Branch</label>
+                                <input class="form-control" name="branch" placeholder="e.g. CSE" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Teacher-only fields -->
+                    <div class="teacher-only" style="display:none">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Department</label>
+                                <input class="form-control" name="department" placeholder="e.g. Computer Science" />
+                            </div>
+                            <div class="form-group">
+                                <label>Employee ID</label>
+                                <input class="form-control" name="employee_id" placeholder="e.g. T-1005" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary btn-block" type="submit">Register</button>
+                </form>
+
+                <p class="auth-footer">Already have an account? <a href="login.html">Log in</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/login.js"></script>
+</body>
+</html>
